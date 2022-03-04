@@ -90,3 +90,16 @@ form.addEventListener("submit", (e) => {
         errorElement.innerText = messages.join(",");
     }
 })
+
+
+
+function toggleModal() {
+    let  modal = document.getElementById("modal_container");
+    console.log(modal);
+    modal.classList.add("show");
+}
+
+function removeModal() {
+    let  modal = document.getElementById("modal_container");
+    modal.classList.remove("show");
+}

@@ -387,3 +387,28 @@ iframe {
     font-size: 1.2rem;
 }
 
+.modal_container {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255, 255, 2550,.90);
+    place-items: center;
+    z-index: 100;
+    display: none;
+    cursor: pointer;
+
+}
+.modal_container  img {
+    border-radius: 16px;
+    width: 60%;
+    aspect-ratio: 16 / 10 ;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.show {
+    display: grid;
+}
+
+.photo-card {
+    cursor: pointer;
+}
