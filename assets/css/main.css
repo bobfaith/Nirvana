@@ -13,7 +13,8 @@
     --border-color: grey;
     --logo-text: 'Montez', cursive;
     --main-title-text: #7a7a80;
-    --sub-title-text: ;
+    --subtitle-text: ;
+    --subtitle-size: .75rem;
     --label-text: poppins;
     --body-text: 'Amiri', serif;
     --body-text-color: rgba(0, 0, 0, 0.75);
@@ -67,6 +68,7 @@ section:not(.home-section) {
     max-width: 1168px;
     margin: 120px auto 0 auto;
     padding: 0 1rem;
+    /* outline: 1px solid blue; */
 }
 
 
@@ -75,7 +77,39 @@ section:not(.home-section) {
     NavBar
 ================================================*/
 
-.navbar {
+.subtitle {
+    font-weight: 400;
+    font-size: var(--subtitle-size);
+    transform: translateY(-.28rem);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+header {
+    background-color: var(--color1);
+    padding: 1em 0;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.container_ {
+    width: 100%;
+    max-width: 1168px;
+    /* border: 1px solid rgb(251, 255, 0); */
+    margin: 0 auto;
+    
+}
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+/* .navbar {
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -86,34 +120,45 @@ section:not(.home-section) {
     overflow: hidden;
     z-index: 99;
     background-color: rgba(255, 255, 255, 0.9);
-}
+    
+} */
 
 
-.nav {
+.navbar .nav_ {
     display: flex;
     list-style: none;
-    text-decoration: none;
-    
+    padding: 0;
+    /* outline: 1px solid red; */
     
 }
 
-.nav-link a {
-    display: inline-block;
-    /* margin: 0 1px; */
-    padding: 0 8px;
+.navbar .nav_link {
+    margin-left: 2em;
+}
+
+.nav_link a {
     color: var(--secondary-color);
     font-weight: 500;
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
+    /* outline: 1px solid blue; */
+    padding: 0 0 .25em 0;
 }
 
-.nav-link .active a {
+.nav_link a:hover, 
+.nav_link a:focus {
+    color: var(--accent-color);
     
 }
 
+.current_page {
+    border-bottom: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
 
-.logo h4 a{
+
+.title a{
     font-family: var(--logo-text);
     font-weight: 600;
     letter-spacing: 2px;
@@ -121,6 +166,7 @@ section:not(.home-section) {
     font-size: 1.2rem;
     text-decoration: none;
     color: var(--secondary-color);
+    
 }
 .mobile_nav {
     display: flex;
@@ -165,7 +211,7 @@ section:not(.home-section) {
 
 
 .distance-row {
-    margin-top: 72px;
+    margin-top: 48px;
 }
 
 .distance-row h3{
@@ -412,4 +458,36 @@ iframe {
     font-family: var(--logo-text);
     font-weight: 500;
     font-size: 1.2rem;
+}
+
+
+/*===============================================
+    Media Queries
+===============================================*/
+
+@media screen and (max-width: 715px) {
+    .nav_container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header {
+        text-align: center;
+        margin: 0;
+        /* outline: 1px solid red; */
+    }
+
+    .navbar .nav_ {
+        display: none;
+    }
+
+    .mobile_nav {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 45px;
+        padding: 10px;
+        background: rgb(240, 237, 237);
+    }
+
 }
