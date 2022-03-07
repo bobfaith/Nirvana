@@ -93,9 +93,12 @@ form.addEventListener("submit", (e) => {
 
 
 
+
+
+
 function toggleModal() {
     let  modal = document.getElementById("modal_container");
-    console.log(modal);
+    // console.log(modal);
     modal.classList.add("show");
 }
 
