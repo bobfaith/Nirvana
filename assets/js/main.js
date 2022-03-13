@@ -41,17 +41,17 @@ function handleIntersect(entries, observer) {
 
 // Nav hamburger selections
 const burger = document.querySelector("#burger-menu");
-const ul = document.querySelector("nav ul");
+const li = document.getElementsByClassName("nav_ nav_link");
 const nav = document.querySelector("nav");
 
 burger?.addEventListener("click", () => {
-    ul.classList.toggle('show');
+    li.classList.toggle('show');
 })
 
 // Close Hamburger menu when a link is clicked
 
 // Select nav links
-const navLink = document.querySelectorAll(".nav-link");
+const navLink = document.querySelectorAll(".nav_link");
 
 navLink.forEach((link) => {
     link.addEventListener("click", () => {
@@ -60,6 +60,20 @@ navLink.forEach((link) => {
 })
 
 
+
+
+
+const menuBtn = document.querySelector(".menu-btn");
+
+let menuOpen = false;
+menuBtn.addEventListener("click", () => {
+    if (!menuOpen) {
+        menuBtn.classList.add("open");
+        menuOpen = true;
+    } else {
+        menuBtn.classList.remove("open");
+        menuOpen = false;
+    }})
 
 
 
@@ -95,14 +109,14 @@ form.addEventListener("submit", (e) => {
 
 
 
+const modal = document.getElementById("modal_container");
 
 function toggleModal() {
-    let  modal = document.getElementById("modal_container");
     // console.log(modal);
     modal.classList.add("show");
 }
 
 function removeModal() {
-    let  modal = document.getElementById("modal_container");
+    // let  modal = document.getElementById("modal_container");
     modal.classList.remove("show");
 }

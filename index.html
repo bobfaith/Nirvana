@@ -27,11 +27,10 @@
             </ul>
         </nav>
         
-        <div class="mobile_nav"> 
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
+        <!-- Hamburger Menu -->
+            <div class="menu-btn">
+                <div class="menu-btn_burger"></div>
+            </div>
         </div>
     </header>
     <!-- Home -->
@@ -126,7 +125,7 @@
                 </P>
             </div>
           </div>
-          <div class="room-section icon-card">
+          <div class="room-section icon-card mobile-off">
               <div class="room-details">
                 <h5>Superior Room</h5>
                   <P class="pic-details">
@@ -135,6 +134,15 @@
                 </div>
                 <img src="assets/images/db.jpg" alt="" class="icon"/>
           </div>
+          <div class="room-section icon-card mobile-on">
+              <img src="assets/images/db.jpg" alt="" class="icon"/>
+            <div class="room-details">
+              <h5>Superior Room</h5>
+                <P class="pic-details">
+                  We have 2 Rooms of this type. This room comes with a small kitchenette, attached bath and open terrace at the front. Space is enough for a group of friends 3/4 numbers and a family of 4 can fit easily. A great budget choice if you are looking to stay somewhere safe, clean and closer to main spots in Darjeeling town. Room is carpeted and heater (during cold months) can be provided on extra cost.
+                </P>
+              </div>
+        </div>
           <div class="room-section icon-card">
               <img src="assets/images/db.jpg" alt="" class="icon"/>
               <div class="room-details">
@@ -223,8 +231,11 @@
 <section class="contact" id="contact">
     <div id="error"></div>
     <h1>Reach Us</h1>
+    
     <div class="contact-form-container">
+        
         <div class="contact-form">
+            <h4 class="hidden_title">Query Form</h4>
             <form id="form" action="https://formsubmit.co/0b99945c4e4362f8e9fcc1fce2906d87" method="POST">
                 <div class="form_control">
                     <label for="name">Name</label>
@@ -251,20 +262,20 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14212.586318302368!2d88.27531325!3d27.057120799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1640250314230!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
 
             <p>
-                <span class="address-title">Address:<img src="assets/icons/location1.png" alt="" loading="lazy" class="location-pic"/></span>
+                <span class="address-title">Address<img src="assets/icons/location1.png" alt="" loading="lazy" class="location-pic"/></span>
                     <span class="address-line">
                         <em>Nirvana HomeStay, 7 Kutchery Road, Meadow Bank, Below Maple Lodge, Darjeeling, West Bengal</em>
                     </span>
                 </span>
             </p>
             <p>
-                <span class="address-title">Phone:<img src="assets/icons/phone.png" alt="" loading="lazy" class="location-pic"/></span>
+                <span class="address-title">Phone<img src="assets/icons/phone.png" alt="" loading="lazy" class="location-pic"/></span>
                 <span class="address-details">
                     <a href="tel:9064824315" target="_blank">+91-906-482-4315</a> 
                 </span>
             </p>
             <p>
-                <span class="address-title">Email:<img src="assets/icons/email.png" alt="" loading="lazy" class="location-pic"/></span>
+                <span class="address-title">Email<img src="assets/icons/email.png" alt="" loading="lazy" class="location-pic"/></span>
                 <span class="address-details">
                     <a href="mailto:info@nirvanahomestay.co.in" target="_blank">info@nirvanahomestay.co.in</a>  
                 </span>
@@ -300,8 +311,8 @@
 
   <!-- Footer Section -->
   <footer class='footer_section'>
-      <p class="style_font">Nirvana HomeStay, Darjeeling, W.B</p>
-      <p class="copy" style="font-family:playlist script">&copy; 2021 Nirvana HomeStay</p>
+          <p class="style_font footer_para_padding_lft">Nirvana HomeStay, Darjeeling, W.B</p>
+          <p class="copy footer_para_padding_rt" style="font-family:playlist script">&copy; 2021 Nirvana HomeStay</p>
   </footer>
     <script type="text/javascript" src="assets/js/main.js"></script>
 
