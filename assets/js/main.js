@@ -38,6 +38,30 @@ function handleIntersect(entries, observer) {
 
 
 
+// Adding current_page class to the navbar
+
+let navbar = document.querySelector(".navbar").querySelectorAll("a");
+let section = document.querySelectorAll("section");
+
+function activeMenu() {
+    let len = section.length;
+    while(--len && window.scrollY + 200 < section[len].offsetTop) {} 
+    navbar.forEach(item => item.classList.remove("current_page"));
+    navbar[len].classList.add("current_page");
+}
+activeMenu();
+window.addEventListener("scroll", activeMenu);
+
+// navbar.forEach(element => {
+//     element.addEventListener("click", function(){
+//         navbar.forEach(e => 
+//             e.classList.remove("current_page"));
+       
+//         this.classList.add("current_page");
+//     })
+// });
+
+
 
 // Nav hamburger selections
 const burger = document.querySelector("#burger-menu");
@@ -52,10 +76,11 @@ burger?.addEventListener("click", () => {
 
 // Select nav links
 const navLink = document.querySelectorAll(".nav_link");
+const navUL = document.querySelectorAll(".nav_");
 
 navLink.forEach((link) => {
     link.addEventListener("click", () => {
-        ul.classList.remove('show');
+        navUL.classList.remove('show');
     })
 })
 

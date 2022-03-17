@@ -127,6 +127,7 @@ header {
 
 
 .navbar .nav_ {
+    /* position: absolute; */
     display: flex;
     list-style: none;
     padding: 0;
@@ -139,6 +140,8 @@ header {
 }
 
 .nav_link a {
+    /* position: relative; */
+    display: block;
     color: var(--secondary-color);
     font-weight: 500;
     cursor: pointer;
@@ -154,7 +157,7 @@ header {
     
 }
 
-.current_page {
+.nav_link a.current_page {
     border-bottom: 2px solid var(--secondary-color);
     color: var(--secondary-color);
 }
